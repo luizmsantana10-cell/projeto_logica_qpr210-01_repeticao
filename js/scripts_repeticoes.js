@@ -82,7 +82,22 @@ for (let elemento of pessoas){
 const divForeach = document.querySelector('#div-foreach')
 
 presentes.forEach((elemento, i)=>{
-    divForeach.innerHTML += `{elemento} <br>`
+    divForeach.innerHTML += `${posicao + 1} - ${elemento} <br>`
 })
+
+const pessoas = [
+    {nome:'SGT Sequelado', idade: 22, renda:18500},
+    {nome:'Joemyson Pinto', idade: 18, renda:1800},
+    {nome:'Gleidson Flor', idade: 19, renda:2000},
+    {nome:'Jefao Kauan', idade: 67, renda:6767},
+    {nome:'Jhonatas Mecanico', idade: 42, renda:10},
+]
+
+const divListaObjFor = document.querySelector('#div-listao-for')
+
+for(i = 0; i < pessoas.length;i++){
+    divListaObjFor.innerHTML += `${pessoas[i].nome}, ${pessoas[i].idade} R$ ${pessoas[i].renda.toFixed(2).replace('.', ',')} <br>`
+    
+}
 
 
