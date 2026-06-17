@@ -78,3 +78,11 @@ const divForOf = document.querySelector('#div-forof')
 for (let elemento of pessoas){
     divForOf.innerHTML += `${elemento} <br>`
 }
+//FOREACH
+const divForeach = document.querySelector('#div-foreach')
+
+presentes.forEach((elemento, i)=>{
+    divForeach.innerHTML += `{elemento} <br>`
+})
+
+
