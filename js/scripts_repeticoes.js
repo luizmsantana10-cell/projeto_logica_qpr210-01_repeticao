@@ -57,11 +57,11 @@ btnFrase.addEventListener('click', ()=>{
 //colecao de dados - array
 const presentes = ['Bicicleta', 'celular' ,'Camisa do Mengao', 'Doleira', 'Tenis adidas']
 
-const divArray =document.querySelector('div-array')
+const divArray = document.querySelector('#div-array')
 
 //div array.inner
 
-for(i= 0;i < 5; i++){
+for(let i = 0; i < 5; i++){
     divArray.innerHTML += `${presentes[i]} <br>`
 }
 
@@ -72,19 +72,6 @@ for(let posicao in presentes){
     divForIn.innerHTML += `${presentes[posicao]} <br>`
 }
 
-//FOR OF
-const divForOf = document.querySelector('#div-forof')
-
-for (let elemento of pessoas){
-    divForOf.innerHTML += `${elemento} <br>`
-}
-//FOREACH
-const divForeach = document.querySelector('#div-foreach')
-
-presentes.forEach((elemento, i)=>{
-    divForeach.innerHTML += `${posicao + 1} - ${elemento} <br>`
-})
-
 const pessoas = [
     {nome:'SGT Sequelado', idade: 22, renda:18500},
     {nome:'Joemyson Pinto', idade: 18, renda:1800},
@@ -93,11 +80,36 @@ const pessoas = [
     {nome:'Jhonatas Mecanico', idade: 42, renda:10},
 ]
 
-const divListaObjFor = document.querySelector('#div-listao-for')
+//FOR OF
+const divForOf = document.querySelector('#div-forof')
 
-for(i = 0; i < pessoas.length;i++){
-    divListaObjFor.innerHTML += `${pessoas[i].nome}, ${pessoas[i].idade} R$ ${pessoas[i].renda.toFixed(2).replace('.', ',')} <br>`
-    
+for (let elemento of pessoas){
+    divForOf.innerHTML += `${elemento.nome} <br>`
 }
 
+//FOREACH
+const divForeach = document.querySelector('#div-foreach')
 
+presentes.forEach((elemento, i)=>{
+    divForeach.innerHTML += `${i + 1} - ${elemento} <br>`
+})
+
+const divListaObjFor = document.querySelector('#div-listaobj-for')
+
+for(let i = 0; i < pessoas.length; i++){
+    divListaObjFor.innerHTML += `${pessoas[i].nome}, ${pessoas[i].idade} R$ ${pessoas[i].renda.toFixed(2).replace('.', ',')} <br>`
+}
+
+//Lista OBJETO LITERAL FOR/IN
+const divListaObjForIn = document.querySelector('div-listaobj-forin')
+
+for(let indice in pessoas){
+    divListaObjForIn.innerHTML += `${indice} - ${pessoas [indice].nome}, ${pessoas[indice].idade}, R$ ${pessoas[indice].renda.toFixed(2).replace('.', ',')} </br>`
+}
+
+//Listando objeto literal pelo for in
+const divListaObjForOf = document.querySelector('div-listaobj-forof')
+
+for(let elem in pessoas){
+    divListaObjForOf.innerHTML += `${contForOf} - ${elem.nome}, ${elem.idade}, R$ ${elem.renda.toFixed(2).replace('.', ',')} </br>`
+}
