@@ -106,6 +106,12 @@ pessoas.splice(1,0)
 //EXCLUI DOIS ELEMENTOS A PARTIR DA POSIÇAO DO INDICE
 pessoas.splice(2,2)
 
+//EXCLUIR O ULTIMO ELEMENTO DO ARRAY
+pessoas.pop()
+
+//EXIBIR A QUANTIDADE DE ELEMENTOS EM UM ARRAY
+console.log('TOTAL DE ELEMENTOS NO ARRAY pessoas ====>', pessoas.length)
+
 // FOR OF
 const divForOf = document.querySelector('#div-forof')
 
