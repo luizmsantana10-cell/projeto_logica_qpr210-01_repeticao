@@ -1,3 +1,4 @@
+import { calculoPercentual } from "./scripts_calculos.js"
 
 function mensagem(){
     console.log('Uma mensagem')
@@ -64,6 +65,7 @@ const intervalo = setInterval(()=>{
 
 }, 3000)
 */
+/*
 
 const divNumSorteio = document.querySelector('#div-num-sorteio')
 
@@ -102,3 +104,8 @@ const sorteio = setInterval(() => {
     }
 
 }, 2000)
+
+*/
+
+//CHAMADO A FUNÇAO DE OUTRO ARQUIVO
+console.log('CALCULO DA FUNÇAO calculopercentual DO ARQUIVO scripts_calculos. js ---> ', calculoPercentual(750))
